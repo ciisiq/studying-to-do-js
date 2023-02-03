@@ -6,16 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To do list</title>
     <link rel="stylesheet" href="styles.css" />
+
+    <!-- ICONS -->
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
   </head>
   <body>
-    <h1>My to do List</h1>
-    <!-- we'll be able to enter text and it has a button that we'll be able to click. -->
-    <input id="task" /><button id="add">Add</button>
-    <!-- We are going to display the current list in that element. -->
-    <!-- HR just a Line -->
-    <hr />
-    <div id="todos"></div>
+    <main>
+      <section class="todo-block">
+        <div class="list-card">
+          <div class="title-container">
+            <span class="material-symbols-outlined"> list_alt </span>
+            <h1>My to do List</h1>
+          </div>
+          <!-- we'll be able to enter text and it has a button that we'll be able to click. -->
+          <div class="add-task">
+            <input id="task" placeholder="Your task here" /><button
+              class="add-btn"
+              id="add"
+            >
+              <span class="material-symbols-outlined"> add </span>
+            </button>
+          </div>
+          <!-- We are going to display the current list in that element. -->
+
+          <div id="todos"></div>
+        </div>
+      </section>
+    </main>
 
     <script src="todo.js"></script>
+    <script>
+      function rangeOfNumbers(startNum, endNum) {
+        if (endNum < startNum) {
+          return [];
+        } else {
+          const numb = rangeOfNumbers(startNum, endNum - 1);
+          numb.push(endNum);
+          return numb;
+        }
+      }
+    </script>
   </body>
 </html>

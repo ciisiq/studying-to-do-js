@@ -1,3 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: rgb(238, 174, 202);
+  background: linear-gradient(
+    90deg,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(184, 109, 203, 1) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.todo-block {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-card {
+  background-color: white;
+  width: 400px;
+  height: 500px;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  color: #aa66d2;
+}
+
+.add-task {
+  display: flex;
+  height: 50px;
+  width: 80%;
+  align-items: center;
+  background-color: #e9a8ca;
+  border-radius: 5px;
+  justify-content: space-between;
+}
+
+input::placeholder {
+  color: white;
+}
+
 h1 {
-  color: blue;
+  font-weight: 800;
+}
+
+.add-btn {
+  margin-right: 10px;
+}
+
+input {
+  align-items: center;
+  background-color: transparent;
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  text-align: center;
+  height: 100%;
+}
+
+input:active {
+  border: none;
+}
+
+button {
+  border-radius: 100%;
+  height: 30px;
+  width: 30px;
+  background-color: #ffba74;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #fdcce6;
+}
+
+#todos {
+  margin-top: 10px;
+  width: 80%;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #fdcce6;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  height: 50px;
+}
+
+.list {
+  display: flex;
+  width: 70%;
+  height: 100%;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 10px;
+  width: 30%;
+  height: 100%;
+}
+
+ul {
+  text-decoration: none;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  color: white;
+  padding-left: 10px;
+}
+
+.remove {
+  background-color: rgb(247, 149, 158);
+}
+
+.remove:hover {
+  background-color: #e9a8ca;
 }

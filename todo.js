@@ -11,13 +11,10 @@ function getTodos() {
 // --add-- will take the text from the input box and save it in our "database" (Localstorage).
 function add() {
   let task = document.getElementById("task").value;
-
   let todos = getTodos();
   todos.push(task);
   localStorage.setItem("todo", JSON.stringify(todos));
-
   show();
-
   return false;
 }
 
@@ -27,9 +24,7 @@ function remove() {
   let todos = getTodos();
   todos.splice(id, 1);
   localStorage.setItem("todo", JSON.stringify(todos));
-
   show();
-
   return false;
 }
 
@@ -40,11 +35,16 @@ function show() {
 
   for (let i = 0; i < todos.length; i++) {
     html +=
+      "<div class='container'>" +
+      "<div class='list'>" +
       "<li>" +
       todos[i] +
+      "</div>" +
+      "<div class='btn'>" +
       '<button class="remove" id="' +
       i +
-      '">x</button></li>';
+      '">x</button></div></li>' +
+      "</div>";
   }
 
   html += "</ul>";
